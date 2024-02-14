@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Evaluation of expression</h1>
+    <form action="" name="form1">
+        <label>Enter the expression:</label>
+        <input type="text" name="exp">
+        <br><br>
+        <input type="submit" onclick="evalexp()">
+        <br><br>
+
+        <label >Result:</label>
+        <input type="text" name="res">
+        <br><br>
+
+        <a href="#" onmousemove="count1()">link pasted here</a>
+        <br><br>
+
+        <input type="text" name="count">
+    </form>
+<br><br>
+
+
+   
+
+    <script>
+       function evalexp(){
+        var e = document.form1.exp.value;
+        var result = eval(e);
+        document.form1.res.value=result;
+       }
+
+       function count1(){
+        var c=0;
+        c++;
+        alert(c);
+        document.form1.count.value=c;
+       }
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<head>
+    
+    <title>form </title>
+
+
+
+
+
+</head>
+
+<body><pre>
+    <form name="form1">
+         <label> name</label><input type="text"  name="est"   placeholder="name">
+        <label> email</label><input type="text"  name="sec"   placeholder="mail">
+     <label> password</label><input type="text"  name="third"   placeholder="key">
+       <input type="submit" onclick="ok()">
+       <p id="content"></p>
+
+    </form>
+</pre>
+<script>  function ok(){
+    var name=document.form1.est.value;
+    var email=document.form1.sec.value;
+    var password=document.form1.third.value;
+
+
+    var atp = email.indexOf("@");
+    var dot = email.lastIndexOf(".");
+
+
+    if(name.length<3){
+        alert("enter the vaild name");
+
+        return false;
+    }
+    else if(password.length<6){
+     alert("please enter 6 letter digit password");
+     return false;
+
+    }
+    else if(atp<1 || dot<atp+2 || dot+2>=+email.length){
+
+        alert("please enter a valid email address");
+        return false;
+    }
+    else {
+        document.getElementById("content").innerHTML="sub,mitted successfully";
+          
+        return false;
+        
+    
+    }
+
+
+
+
+}
+
+
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+
+
+</html>
